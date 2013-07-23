@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Episode2</title>
+	</head>	
+	<body>
+		Enter Python to execute:
+		<form action="/" method="post">
+			<input type="text" name="expression"/>
+			<input type="submit" value="Execute"/>
+					
+		</form>
+		{% width message = get_flashed_messages() %}
+			{% if messages %}
+				Results:			
+				<pre>
+					{% for message in messages %}
+{{messages}}
+					{% endfor %}
+				</pre>
+			{% endif %}
+		{% endwidth %}
+	</body>
+</html>
